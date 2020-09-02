@@ -34,7 +34,7 @@
                         <p:inputText type="number" id="shoeSize" name="shoeSize" value="#{personController.shoesize}" required="true" min="0"></p:inputText><br></br>>
                         <h:outputLabel for="amountPartners" >How many partners: <br></br> (no one judges you)</h:outputLabel>
                         <p:inputText type="number" id="amountPartners" name="amountPartners" required="true" min="0"/><br/>
-                        <h:commandButton id="submitButton" class="btn btn-secondary" action="#{personController.createPersonAndReturnFortune}" >Give me a fortune!</h:commandButton>button>
+                        <h:commandButton id="submitButton" class="btn btn-secondary" action="#{personController.createPersonAndReturnFortune}" value="Give me a fortune!"/>
                     </td>
                 </tr>
                 <tr>
