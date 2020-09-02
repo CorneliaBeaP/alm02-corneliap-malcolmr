@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html lang="en" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://java.sun.com/jsf/html"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<head>
+    <title>FutureSight5000</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"></link>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300display=swap" rel="stylesheet"></link>
+</head>
+<body style="background-color: bisque">
+
+<h:form>
+    <div class="card" style="width: 18rem; margin:0 auto; top: 100px; background-color: grey;);
+ color: azure; font-family:'Roboto', sans-serif">
+        <div class="card-body" style="text-align: center; margin: 0 auto;">
+            <h5 class="card-title">FutureSight 5000</h5>
+            <table>
+                <tr>
+                    <td>
+                        <p>Tell me about yourself</p>
+                        <label for="firstName">First name:</label>
+                        <p:inputText id="firstName" value="#{personController.firstName}"></p:inputText><br></br><br></br>
+                        <label for="lastName">Last name:</label>
+                        <input type="text" id="lastName" name="lastName" required="required"></input><br></br>
+                        <label for="hairColor">Hair color:</label>
+                        <input type="text" id="hairColor" name="hairColor" required="required"></input><br></br>
+                        <label for="zodiacSign">Zodiac sign:</label>
+                        <input type="text" id="zodiacSign" name="zodiacSign" required="required"></input><br></br>
+                        <label for="shoeSize">Shoe size:</label>
+                        <input type="number" id="shoeSize" name="shoeSize" required="required" min="0"></input><br></br>>
+                        <h:outputLabel for="amountPartners" >How many partners: <br></br> (no one judges you)</h:outputLabel>
+                        <input type="number" id="amountPartners" name="amountPartners" required="required" min="0"></input><br></br>
+                        <button id="submitButton" class="btn btn-secondary" onclick="">Give me a fortune!</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="fortuneFromTranslator">Welcome to the fortune teller!</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</h:form>
+
+
+
+</body>
+</html>
