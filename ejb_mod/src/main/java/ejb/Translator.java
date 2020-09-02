@@ -5,7 +5,7 @@ public class Translator {
     private RandomFactor rf = new RandomFactor();
     private String fortune;
 
-    public String generateFortune(Person person){
+    public String generateFortune(PersonBean person){
 
         fortune = rf.randomStringFromZodiacSign(person.getZodiacSign());
         fortune += rf.randomStringFromLastName(person.getLastName());
