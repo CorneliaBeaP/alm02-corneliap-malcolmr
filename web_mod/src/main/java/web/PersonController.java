@@ -24,7 +24,6 @@ public class PersonController implements Serializable {
     private String fortune = "Welcome to the fortune teller!";
 
 public void createPersonAndReturnFortune(){
-    System.out.println(personBeanLocal.createPersonAndReturnFortune(firstName, lastName, haircolor, shoesize, zodiacSign, currentPartners));
     setFortune(personBeanLocal.createPersonAndReturnFortune(firstName, lastName, haircolor, shoesize, zodiacSign, currentPartners));
 }
     public String getFirstName() {
