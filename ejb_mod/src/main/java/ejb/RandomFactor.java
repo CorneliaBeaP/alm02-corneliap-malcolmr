@@ -4,7 +4,9 @@ import java.util.Random;
 
 public class RandomFactor {
 
-    public String firstNameRandomizer(String input) {
+    public String firstNameRandomizer(PersonBean personBean) {
+        String input = personBean.getFirstName();
+
         String result = "";
 
         if (input.length() <= 3) {
@@ -34,7 +36,8 @@ public class RandomFactor {
         return result;
     }
 
-    public String haircolorRandomizer(String input) {
+    public String haircolorRandomizer(PersonBean personBean) {
+        String input = personBean.getHaircolor();
         String result = "";
 
         if (input.toLowerCase().contains("blue")) {
@@ -56,7 +59,8 @@ public class RandomFactor {
         return result;
     }
 
-    public int shoesizeRandomizer(int input) {
+    public int shoesizeRandomizer(PersonBean personBean) {
+        int input = personBean.getShoesize();
         Random random = new Random();
         int luckyNumber = 0;
 
@@ -78,7 +82,8 @@ public class RandomFactor {
     }
 
 
-    public String randomStringFromLastName(String lastName) {
+    public String randomStringFromLastName(PersonBean personBean) {
+        String lastName = personBean.getLastName();
         if (lastName.length() >= 10) {
             return "your worst enemy ";
         } else if (lastName.length() >= 8) {
@@ -93,7 +98,8 @@ public class RandomFactor {
             return "you ";
     }
 
-    public String randomStringFromCurrentPartners(int currentPartners) {
+    public String randomStringFromCurrentPartners(PersonBean personBean) {
+        int currentPartners = personBean.getCurrentPartners();
         Random random = new Random();
         int number = random.nextInt(110) + 1;
         System.out.println(currentPartners + number);
@@ -122,7 +128,8 @@ public class RandomFactor {
 
     }
 
-    public String randomStringFromZodiacSign(String zodiacSign) {
+    public String randomStringFromZodiacSign(PersonBean personBean) {
+        String zodiacSign = personBean.getZodiacSign();
         char c;
         int vowels = 0;
         Random random = new Random();
