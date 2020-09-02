@@ -21,9 +21,11 @@ public class PersonController implements Serializable {
     private String zodiacSign;
     private int currentPartners;
 
-public void createPerson(){
-    System.out.println(personBeanLocal.createPerson(firstName, lastName, haircolor, shoesize, zodiacSign, currentPartners));
+    private String fortune = "Welcome to the fortune teller!";
 
+public void createPersonAndReturnFortune(){
+    System.out.println(personBeanLocal.createPersonAndReturnFortune(firstName, lastName, haircolor, shoesize, zodiacSign, currentPartners));
+    setFortune(personBeanLocal.createPersonAndReturnFortune(firstName, lastName, haircolor, shoesize, zodiacSign, currentPartners));
 }
     public String getFirstName() {
         return firstName;
@@ -71,5 +73,13 @@ public void createPerson(){
 
     public void setCurrentPartners(int currentPartners) {
         this.currentPartners = currentPartners;
+    }
+
+    public String getFortune() {
+        return fortune;
+    }
+
+    public void setFortune(String fortune) {
+        this.fortune = fortune;
     }
 }

@@ -34,12 +34,13 @@
                         <input type="number" id="shoeSize" name="shoeSize" value="#{personController.shoesize}" required="required" min="0"></input><br></br>>
                         <h:outputLabel for="amountPartners" >How many partners: <br></br> (no one judges you)</h:outputLabel>
                         <input type="number" id="amountPartners" name="amountPartners" required="required" min="0"></input><br></br>
-                        <h:commandButton id="submitButton" class="btn btn-secondary" action="#{personController.createPerson}" >Give me a fortune!</h:commandButton>button>
+                        <h:commandButton id="submitButton" class="btn btn-secondary" action="#{personController.createPersonAndReturnFortune}" >Give me a fortune!</h:commandButton>button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <p id="fortuneFromTranslator">Welcome to the fortune teller!</p>
+                        <h:outputLabel value="#{personController.fortune}"></h:outputLabel>
                     </td>
                 </tr>
             </table>

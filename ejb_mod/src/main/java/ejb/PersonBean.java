@@ -73,7 +73,7 @@ public class PersonBean implements PersonBeanLocal {
     }
 
     @Override
-    public String createPerson(String firstname, String lastname, String haircolor, int shoesize, String zodiacSign, int currentPartners) {
+    public String createPersonAndReturnFortune(String firstname, String lastname, String haircolor, int shoesize, String zodiacSign, int currentPartners) {
        PersonBean personBean = new PersonBean(firstname, lastname, haircolor, shoesize, zodiacSign, currentPartners);
         return personBean.getFirstName();
     }
