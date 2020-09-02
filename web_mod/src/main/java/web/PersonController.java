@@ -21,7 +21,10 @@ public class PersonController implements Serializable {
     private String zodiacSign;
     private int currentPartners;
 
+public void createPerson(){
+    System.out.println(personBeanLocal.createPerson(firstName, lastName, haircolor, shoesize, zodiacSign, currentPartners));
 
+}
     public String getFirstName() {
         return firstName;
     }

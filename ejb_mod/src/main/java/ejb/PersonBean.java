@@ -71,4 +71,10 @@ public class PersonBean implements PersonBeanLocal {
     public void setCurrentPartners(int currentPartners) {
         this.currentPartners = currentPartners;
     }
+
+    @Override
+    public String createPerson(String firstname, String lastname, String haircolor, int shoesize, String zodiacSign, int currentPartners) {
+       PersonBean personBean = new PersonBean(firstname, lastname, haircolor, shoesize, zodiacSign, currentPartners);
+        return personBean.getFirstName();
+    }
 }

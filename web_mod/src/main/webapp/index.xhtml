@@ -25,16 +25,16 @@
                         <label for="firstName">First name:</label>
                         <p:inputText id="firstName" value="#{personController.firstName}"></p:inputText><br></br><br></br>
                         <label for="lastName">Last name:</label>
-                        <input type="text" id="lastName" name="lastName" required="required"></input><br></br>
+                        <input type="text" id="lastName" name="lastName" value="#{personController.lastName}" required="required"></input><br></br>
                         <label for="hairColor">Hair color:</label>
-                        <input type="text" id="hairColor" name="hairColor" required="required"></input><br></br>
+                        <input type="text" id="hairColor" name="hairColor" value="#{personController.haircolor}" required="required"></input><br></br>
                         <label for="zodiacSign">Zodiac sign:</label>
-                        <input type="text" id="zodiacSign" name="zodiacSign" required="required"></input><br></br>
+                        <input type="text" id="zodiacSign" name="zodiacSign" value="#{personController.zodiacSign}" required="required"></input><br></br>
                         <label for="shoeSize">Shoe size:</label>
-                        <input type="number" id="shoeSize" name="shoeSize" required="required" min="0"></input><br></br>>
+                        <input type="number" id="shoeSize" name="shoeSize" value="#{personController.shoesize}" required="required" min="0"></input><br></br>>
                         <h:outputLabel for="amountPartners" >How many partners: <br></br> (no one judges you)</h:outputLabel>
                         <input type="number" id="amountPartners" name="amountPartners" required="required" min="0"></input><br></br>
-                        <button id="submitButton" class="btn btn-secondary" onclick="">Give me a fortune!</button>
+                        <h:commandButton id="submitButton" class="btn btn-secondary" action="#{personController.createPerson}" >Give me a fortune!</h:commandButton>button>
                     </td>
                 </tr>
                 <tr>
