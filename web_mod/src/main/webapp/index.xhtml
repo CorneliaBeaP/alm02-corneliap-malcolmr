@@ -27,20 +27,20 @@
                         <label for="lastName">Last name:</label>
                         <p:inputText id="lastName" name="lastName" value="#{personController.lastName}"></p:inputText><br></br>
                         <label for="hairColor">Hair color:</label>
-                        <input type="text" id="hairColor" name="hairColor" value="#{personController.haircolor}" required="required"></input><br></br>
+                        <p:inputText id="hairColor" name="hairColor" value="#{personController.haircolor}" required="true"></p:inputText><br></br>
                         <label for="zodiacSign">Zodiac sign:</label>
-                        <input type="text" id="zodiacSign" name="zodiacSign" value="#{personController.zodiacSign}" required="required"></input><br></br>
+                        <p:inputText type="text" id="zodiacSign" name="zodiacSign" value="#{personController.zodiacSign}" required="true"></p:inputText><br></br>
                         <label for="shoeSize">Shoe size:</label>
-                        <input type="number" id="shoeSize" name="shoeSize" value="#{personController.shoesize}" required="required" min="0"></input><br></br>>
+                        <p:inputText type="number" id="shoeSize" name="shoeSize" value="#{personController.shoesize}" required="true" min="0"></p:inputText><br></br>>
                         <h:outputLabel for="amountPartners" >How many partners: <br></br> (no one judges you)</h:outputLabel>
-                        <input type="number" id="amountPartners" name="amountPartners" required="required" min="0"></input><br></br>
+                        <p:inputText type="number" id="amountPartners" name="amountPartners" required="true" min="0"/><br/>
                         <h:commandButton id="submitButton" class="btn btn-secondary" action="#{personController.createPersonAndReturnFortune}" >Give me a fortune!</h:commandButton>button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <p id="fortuneFromTranslator">Welcome to the fortune teller!</p>
-                        <h:outputLabel value="#{personController.fortune}"></h:outputLabel>
+                        <p id="fortuneFromTranslator"><h:outputLabel value="#{personController.fortune}"/></p>
+
                     </td>
                 </tr>
             </table>
