@@ -20,15 +20,19 @@ class RandomFactorTest {
 
     @Test
     void randomStringFromCurrentPartners() {
-        for (int i = 0; i < 100; i++) {
-            System.out.println(rf.randomStringFromCurrentPartners(2));
+        for (int i = 0; i < 1000 ; i++) {
+
+       assertNotEquals(rf.randomStringFromCurrentPartners(1).length(),0);
+       assertNotNull(rf.randomStringFromCurrentPartners(20));
         }
     }
 
     @Test
     void randomStringFromZodiacSign() {
-        for (int i = 0; i < 100; i++) {
-            System.out.println(rf.randomStringFromZodiacSign("vaduren"));
+
+        for (int i = 0; i < 1000; i++) {
+        assertNotNull(rf.randomStringFromZodiacSign("Väduren"));
+        assertNotEquals(rf.randomStringFromZodiacSign("Skytten").length(),0);
         }
     }
 
@@ -47,19 +51,12 @@ class RandomFactorTest {
         assertEquals(rf.haircolorRandomizer("grey"), "dawn");
     }
 
-//    @Test
-//    void shoesizeRandomizer() {
-//        for (int i = 0; i < 1000; i++) {
-//            int tempRandom = rf.shoesizeRandomizer(38);
-//            if (tempRandom < 20 || tempRandom > 24) {
-//                fail("The result is " + tempRandom + " but should be between 20-24.");
-//            }
-//        }
-//        for (int i = 0; i < 1000; i++) {
-//            int tempRandom = rf.shoesizeRandomizer(45);
-//            if (tempRandom < 20 || tempRandom > 24) {
-//                fail("The result is " + tempRandom + " but should be between 20-24.");
-//            }
-//        }
-//    }
+    @Test
+    void shoesizeRandomizer() {
+        for (int i = 0; i < 1000 ; i++) {
+        assertNotEquals(rf.shoesizeRandomizer(41), 200);
+        assertNotEquals(rf.shoesizeRandomizer(31), 300);
+        assertNotEquals(rf.shoesizeRandomizer(21), 400);
+        }
+    }
 }
