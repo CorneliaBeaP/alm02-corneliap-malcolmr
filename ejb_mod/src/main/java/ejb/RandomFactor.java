@@ -4,8 +4,7 @@ import java.util.Random;
 
 public class RandomFactor {
 
-    public String firstNameRandomizer(PersonBean personBean) {
-        String input = personBean.getFirstName();
+    public String firstNameRandomizer(String input) {
 
         String result = "";
 
@@ -36,8 +35,7 @@ public class RandomFactor {
         return result;
     }
 
-    public String haircolorRandomizer(PersonBean personBean) {
-        String input = personBean.getHaircolor();
+    public String haircolorRandomizer(String input) {
         String result = "";
 
         if (input.toLowerCase().contains("blue")) {
@@ -59,8 +57,8 @@ public class RandomFactor {
         return result;
     }
 
-    public int shoesizeRandomizer(PersonBean personBean) {
-        int input = personBean.getShoesize();
+    public int shoesizeRandomizer(int input) {
+
         Random random = new Random();
         int luckyNumber = 0;
 
@@ -82,8 +80,7 @@ public class RandomFactor {
     }
 
 
-    public String randomStringFromLastName(PersonBean personBean) {
-        String lastName = personBean.getLastName();
+    public String randomStringFromLastName(String lastName) {
         if (lastName.length() >= 10) {
             return "your worst enemy ";
         } else if (lastName.length() >= 8) {
@@ -98,8 +95,7 @@ public class RandomFactor {
             return "you ";
     }
 
-    public String randomStringFromCurrentPartners(PersonBean personBean) {
-        int currentPartners = personBean.getCurrentPartners();
+    public String randomStringFromCurrentPartners(int currentPartners) {
         Random random = new Random();
         int number = random.nextInt(110) + 1;
         System.out.println(currentPartners + number);
@@ -128,8 +124,7 @@ public class RandomFactor {
 
     }
 
-    public String randomStringFromZodiacSign(PersonBean personBean) {
-        String zodiacSign = personBean.getZodiacSign();
+    public String randomStringFromZodiacSign(String zodiacSign) {
         char c;
         int vowels = 0;
         Random random = new Random();
