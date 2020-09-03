@@ -10,12 +10,12 @@ class RandomFactorTest {
 
     @Test
     void randomStringFromLastName() {
-        assertEquals(rf.randomStringFromLastName("Rudhag"), "your neighbors cat ");
-        assertEquals(rf.randomStringFromLastName("Persson"), "your neighbors cat ");
-        assertEquals(rf.randomStringFromLastName(""), "you ");
-        assertEquals(rf.randomStringFromLastName("Hunchback"), "your secret lover ");
-        assertEquals(rf.randomStringFromLastName("Bilbo"), "your prison cellmate ");
-        assertEquals(rf.randomStringFromLastName("Bob"), "your pole dancing teacher ");
+        assertEquals(rf.randomStringFromLastName("Rudhag"), "Your neighbors cat ");
+        assertEquals(rf.randomStringFromLastName("Persson"), "Your neighbors cat ");
+        assertEquals(rf.randomStringFromLastName(""), "You ");
+        assertEquals(rf.randomStringFromLastName("Hunchback"), "Your secret lover ");
+        assertEquals(rf.randomStringFromLastName("Bilbo"), "Your prison cellmate ");
+        assertEquals(rf.randomStringFromLastName("Bob"), "Your pole dancing teacher ");
     }
 
     @Test
