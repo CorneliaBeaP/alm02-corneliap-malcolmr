@@ -7,6 +7,7 @@ public class PersonBean implements PersonBeanLocal {
 
     Translator translator = new Translator();
 
+
     public PersonBean() {
     }
 
