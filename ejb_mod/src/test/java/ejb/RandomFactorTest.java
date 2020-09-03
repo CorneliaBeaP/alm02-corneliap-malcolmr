@@ -37,8 +37,8 @@ public class RandomFactorTest {
     }
 
 
-    public @Test
-    void firstNameRandomizer() {
+     @Test
+     public void firstNameRandomizer() {
         assertEquals(rf.firstNameRandomizer("Anna"), "your mom");
         assertEquals(rf.firstNameRandomizer("Cornelia"), "your favourite childhood teacher");
         assertEquals(rf.firstNameRandomizer(""), "your dad");
