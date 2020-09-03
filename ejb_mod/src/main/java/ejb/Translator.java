@@ -11,7 +11,7 @@ public class Translator {
         fortune += rf.randomStringFromLastName(person.getLastName());
         fortune += rf.randomStringFromCurrentPartners(person.getCurrentPartners());
         fortune += rf.firstNameRandomizer(person.getFirstName());
-        fortune += "at";
+        fortune += " at ";
         fortune += rf.haircolorRandomizer(person.getHaircolor());
         fortune += "! Your lucky number today is " + rf.shoesizeRandomizer(person.getShoesize()) + "!";
 

@@ -82,17 +82,17 @@ public class RandomFactor {
 
     public String randomStringFromLastName(String lastName) {
         if (lastName.length() >= 10) {
-            return "your worst enemy ";
+            return "Your worst enemy ";
         } else if (lastName.length() >= 8) {
-            return "your secret lover ";
+            return "Your secret lover ";
         } else if (lastName.length() >= 6) {
-            return "your neighbors cat ";
+            return "Your neighbors cat ";
         } else if (lastName.length() >= 4) {
-            return "your prison cellmate ";
+            return "Your prison cellmate ";
         } else if (lastName.length() > 0) {
-            return "your pole dancing teacher ";
+            return "Your pole dancing teacher ";
         } else
-            return "you ";
+            return "You ";
     }
 
     public String randomStringFromCurrentPartners(int currentPartners) {
@@ -140,24 +140,24 @@ public class RandomFactor {
 
         if (vowels >= 3) {
             if (random.nextInt(3) + 1 == 3)
-                return "Monday";
+                return "Monday: ";
             else if (random.nextInt(3) + 1 == 2)
-                return "Tuesday";
+                return "Tuesday: ";
             else if (random.nextInt(3) + 1 == 1)
-                return "Wednesday";
+                return "Wednesday: ";
         }
 
         else  {
             if (random.nextInt(3) + 1 == 3)
-                return "Thursday";
+                return "Thursday: ";
             else if (random.nextInt(3) + 1 == 2)
-                return "Friday";
+                return "Friday: ";
             else if (random.nextInt(3) + 1 == 1)
-                return "Saturday";
+                return "Saturday: ";
             else if (random.nextInt(3) + 1 == 1)
-                return "Sunday";
+                return "Sunday: ";
         }
-        return "Today";
+        return "Today: ";
     }
 
 
