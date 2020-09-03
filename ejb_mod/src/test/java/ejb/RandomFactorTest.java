@@ -1,15 +1,15 @@
 package ejb;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class RandomFactorTest {
+public class RandomFactorTest {
 
     RandomFactor rf = new RandomFactor();
 
     @Test
-    void randomStringFromLastName() {
+    public void randomStringFromLastName() {
         assertEquals(rf.randomStringFromLastName("Rudhag"), "Your neighbors cat ");
         assertEquals(rf.randomStringFromLastName("Persson"), "Your neighbors cat ");
         assertEquals(rf.randomStringFromLastName(""), "You ");
@@ -19,25 +19,25 @@ class RandomFactorTest {
     }
 
     @Test
-    void randomStringFromCurrentPartners() {
-        for (int i = 0; i < 1000 ; i++) {
+    public void randomStringFromCurrentPartners() {
+        for (int i = 0; i < 1000; i++) {
 
-       assertNotEquals(rf.randomStringFromCurrentPartners(1).length(),0);
-       assertNotNull(rf.randomStringFromCurrentPartners(20));
+            assertNotEquals(rf.randomStringFromCurrentPartners(1).length(), 0);
+            assertNotNull(rf.randomStringFromCurrentPartners(20));
         }
     }
 
     @Test
-    void randomStringFromZodiacSign() {
+    public void randomStringFromZodiacSign() {
 
         for (int i = 0; i < 1000; i++) {
-        assertNotNull(rf.randomStringFromZodiacSign("Väduren"));
-        assertNotEquals(rf.randomStringFromZodiacSign("Skytten").length(),0);
+            assertNotNull(rf.randomStringFromZodiacSign("Väduren"));
+            assertNotEquals(rf.randomStringFromZodiacSign("Skytten").length(), 0);
         }
     }
 
 
-    @Test
+    public @Test
     void firstNameRandomizer() {
         assertEquals(rf.firstNameRandomizer("Anna"), "your mom");
         assertEquals(rf.firstNameRandomizer("Cornelia"), "your favourite childhood teacher");
@@ -45,18 +45,18 @@ class RandomFactorTest {
     }
 
     @Test
-    void haircolorRandomizer() {
+    public void haircolorRandomizer() {
         assertEquals(rf.haircolorRandomizer("pink"), "dusk");
         assertEquals(rf.haircolorRandomizer("green"), "the darkest hour");
         assertEquals(rf.haircolorRandomizer("grey"), "dawn");
     }
 
     @Test
-    void shoesizeRandomizer() {
-        for (int i = 0; i < 1000 ; i++) {
-        assertNotEquals(rf.shoesizeRandomizer(41), 200);
-        assertNotEquals(rf.shoesizeRandomizer(31), 300);
-        assertNotEquals(rf.shoesizeRandomizer(21), 400);
+    public void shoesizeRandomizer() {
+        for (int i = 0; i < 1000; i++) {
+            assertNotEquals(rf.shoesizeRandomizer(41), 200);
+            assertNotEquals(rf.shoesizeRandomizer(31), 300);
+            assertNotEquals(rf.shoesizeRandomizer(21), 400);
         }
     }
 }
