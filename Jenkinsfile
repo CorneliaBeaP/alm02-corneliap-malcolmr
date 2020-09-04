@@ -13,7 +13,7 @@ pipeline{
                 
                 post{
                     always {
-                        junit 'target/surefire-reports/*.xml'
+                        junit 'ejb_mod/target/surefire-reports/*.xml'
                         publishHTML([
                             allowMissing: false, 
                             alwaysLinkToLastBuild: false, 
@@ -28,13 +28,15 @@ pipeline{
                             allowMissing: false, 
                             alwaysLinkToLastBuild: false, 
                             keepAll: false, 
-                            reportDir: 'target/site/jacoco/', 
+                            reportDir: 'ejb_mod/target/site/jacoco/', 
                             reportFiles: 'index.html', 
                             reportName: 'Test coverage', 
                             reportTitles: 'Test coverage'
                             ])
                     }
-                    
+                    success{
+                    archive 'web_mod/target/web_mod-1.0-SNAPSHOT.war'
+                }
 
                 }
               
@@ -43,7 +45,7 @@ pipeline{
             stage('Deploy application'){
                 agent any
                 steps{
-                    sh 'asadmin --port 4848 deploy --force --name calc-${DEPLOY_ENV} --contextroot calc-${DEPLOY_ENV} target/calc-jsf-1.0.war'
+                    sh 'asadmin --port 4848 deploy --force --name alm02-corneliap-malcolmr-${DEPLOY_ENV} --contextroot alm02-corneliap-malcolmr-${DEPLOY_ENV} web_mod/target/web_mod-1.0-SNAPSHOT.war'
                 }
 
             }
