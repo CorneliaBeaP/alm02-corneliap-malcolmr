@@ -70,6 +70,15 @@ public class RandomFactorTest {
             assertNotEquals(rf.shoesizeRandomizer(37), 400);
             assertNotEquals(rf.shoesizeRandomizer(39), 400);
             assertNotEquals(rf.shoesizeRandomizer(41), 400);
+            assertNotEquals(rf.shoesizeRandomizer(44), 400);
+            assertNotEquals(rf.shoesizeRandomizer(211), 400);
+            assertNotEquals(rf.shoesizeRandomizer(41), -1);
+            assertNotEquals(rf.shoesizeRandomizer(31), -1);
+            assertNotEquals(rf.shoesizeRandomizer(21), -1);
+            assertNotEquals(rf.shoesizeRandomizer(37), -1);
+            assertNotEquals(rf.shoesizeRandomizer(39), -1);
+            assertNotEquals(rf.shoesizeRandomizer(41), -1);
+            assertNotEquals(rf.shoesizeRandomizer(44), -1);
             assertNotEquals(rf.shoesizeRandomizer(211), -1);
         }
     }
