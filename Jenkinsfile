@@ -5,7 +5,7 @@ pipeline{
     }
 
     stages{
-            stage('Build application'){
+            stage('Build application, run tests and publish test results'){
                 agent {
         docker{ image 'rasilva1986/java-maven:alm'}
                 }
@@ -37,12 +37,16 @@ pipeline{
                             reportTitles: 'Test coverage'
                             ])
                     }
-                    success{
-                    archive 'web_mod/target/web_mod-1.0-SNAPSHOT.war'
-                }
+               
 
                 }
               
+            }
+            stage('Save artifact'){
+                agent any
+                steps{
+                    archive 'web_mod/target/web_mod-1.0-SNAPSHOT.war'
+                }
             }
             
             stage('Deploy application'){
@@ -56,3 +60,4 @@ pipeline{
         }
 
 }
+
