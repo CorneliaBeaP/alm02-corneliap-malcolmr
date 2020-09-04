@@ -34,6 +34,7 @@ public class RandomFactorTest {
         for (int i = 0; i < 1000; i++) {
             assertNotNull(rf.randomStringFromZodiacSign("Väduren"));
             assertNotEquals(rf.randomStringFromZodiacSign("Skytten").length(), 0);
+            assertNotEquals(rf.randomStringFromZodiacSign("aieoäöåyu").length(), 0);
         }
     }
 
