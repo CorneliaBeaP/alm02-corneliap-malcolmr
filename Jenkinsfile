@@ -1,5 +1,10 @@
 pipeline{
-    agent any
+    agent {
+        docker{ 
+            image 'rasilva1986/java-maven:alm'
+        }
+        
+    }
     parameters{
         choice(name: 'DEPLOY_ENV', choices: ['int', 'stage', 'prod'], description:'Target environment')
     }
@@ -8,7 +13,7 @@ pipeline{
             stage('Build application'){
                 agent any
                 steps{
-                    sh 'mvn clean install'
+                    docker 'run 76335a9b228b mvn clean install'
                 }
                 
                 post{
@@ -18,7 +23,7 @@ pipeline{
                             allowMissing: false, 
                             alwaysLinkToLastBuild: false, 
                             keepAll: false, 
-                            reportDir: 'target/surefire-reports', 
+                            reportDir: 'ejb_mod/target/surefire-reports', 
                             reportFiles: 'index.html', 
                             reportName: 'Unit tests', 
                             reportTitles: 'Unit tests'
