@@ -60,6 +60,8 @@ public class RandomFactorTest {
         assertEquals(rf.haircolorRandomizer("blond"), "five o'clock");
         assertEquals(rf.haircolorRandomizer("brown"), "midnight");
         assertEquals(rf.haircolorRandomizer("black"), "half past six");
+        assertEquals(rf.haircolorRandomizer("white"), "five o'clock");
+        assertEquals(rf.haircolorRandomizer("yellow"), "five o'clock");
     }
 
     @Test
