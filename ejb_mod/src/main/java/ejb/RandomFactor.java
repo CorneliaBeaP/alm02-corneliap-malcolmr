@@ -98,7 +98,6 @@ public class RandomFactor {
     public String randomStringFromCurrentPartners(int currentPartners) {
         Random random = new Random();
         int number = random.nextInt(110) + 1;
-        System.out.println(currentPartners + number);
         if (currentPartners + number >= 100)
             return "will tickle the crap out of ";
         else if (currentPartners + number >= 90)

@@ -16,6 +16,7 @@ public class RandomFactorTest {
         assertEquals(rf.randomStringFromLastName("Hunchback"), "Your secret lover ");
         assertEquals(rf.randomStringFromLastName("Bilbo"), "Your prison cellmate ");
         assertEquals(rf.randomStringFromLastName("Bob"), "Your pole dancing teacher ");
+        assertEquals(rf.randomStringFromLastName("VeryLongLastNameIndeed"), "Your worst enemy ");
     }
 
     @Test
@@ -37,11 +38,16 @@ public class RandomFactorTest {
     }
 
 
-     @Test
-     public void firstNameRandomizer() {
+    @Test
+    public void firstNameRandomizer() {
         assertEquals(rf.firstNameRandomizer("Anna"), "your mom");
         assertEquals(rf.firstNameRandomizer("Cornelia"), "your favourite childhood teacher");
         assertEquals(rf.firstNameRandomizer(""), "your dad");
+        assertEquals(rf.firstNameRandomizer("Femfe"), "your high school crush");
+        assertEquals(rf.firstNameRandomizer("Gregor"), "your therapist");
+        assertEquals(rf.firstNameRandomizer("Gregory"), "your best friend");
+        assertEquals(rf.firstNameRandomizer("Valdemar+mer"), "your boss");
+        assertEquals(rf.firstNameRandomizer("Bilboswagginsinioli"), "your parents");
     }
 
     @Test
@@ -49,6 +55,10 @@ public class RandomFactorTest {
         assertEquals(rf.haircolorRandomizer("pink"), "dusk");
         assertEquals(rf.haircolorRandomizer("green"), "the darkest hour");
         assertEquals(rf.haircolorRandomizer("grey"), "dawn");
+        assertEquals(rf.haircolorRandomizer("blue"), "noon");
+        assertEquals(rf.haircolorRandomizer("blond"), "five o'clock");
+        assertEquals(rf.haircolorRandomizer("brown"), "midnight");
+        assertEquals(rf.haircolorRandomizer("black"), "half past six");
     }
 
     @Test
@@ -57,6 +67,10 @@ public class RandomFactorTest {
             assertNotEquals(rf.shoesizeRandomizer(41), 200);
             assertNotEquals(rf.shoesizeRandomizer(31), 300);
             assertNotEquals(rf.shoesizeRandomizer(21), 400);
+            assertNotEquals(rf.shoesizeRandomizer(37), 400);
+            assertNotEquals(rf.shoesizeRandomizer(39), 400);
+            assertNotEquals(rf.shoesizeRandomizer(41), 400);
+            assertNotEquals(rf.shoesizeRandomizer(211), -1);
         }
     }
 }
