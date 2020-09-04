@@ -1,19 +1,17 @@
 pipeline{
-    agent {
-        docker{ 
-            image 'rasilva1986/java-maven:alm'
-        }
-        
-    }
+    agent any
     parameters{
         choice(name: 'DEPLOY_ENV', choices: ['int', 'stage', 'prod'], description:'Target environment')
     }
 
     stages{
             stage('Build application'){
-                agent any
+                agent {
+        docker{ image 'rasilva1986/java-maven:alm'}
+                }
+        
                 steps{
-                    docker 'run 76335a9b228b mvn clean install'
+                    sh 'mvn clean install'
                 }
                 
                 post{
